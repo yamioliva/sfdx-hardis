@@ -28,6 +28,14 @@ It will allow you to:
 
 ## Installation
 
+### With IDE
+
+You can install [Visual Studio Code](https://code.visualstudio.com/) extension [VsCode SFDX Hardis](https://marketplace.visualstudio.com/items?itemName=NicolasVuillamy.vscode-sfdx-hardis)
+
+Once installed, click on ![Cloudity button](https://github.com/hardisgroupcom/sfdx-hardis/raw/main/docs/assets/images/hardis-button.jpg) in VsCode left bar, and follow the additional installation instructions
+
+[![VsCode SFDX Hardis](https://github.com/hardisgroupcom/sfdx-hardis/raw/main/docs/assets/images/extension-icon.png)](https://marketplace.visualstudio.com/items?itemName=NicolasVuillamy.vscode-sfdx-hardis)
+
 ### SFDX Plugin
 
 #### Pre-requisites
@@ -50,13 +58,11 @@ sfdx plugins:install sfdx-essentials
 sfdx plugins:install texei-sfdx-plugin
 ```
 
-### With IDE
+If you need to install plugins during a CI job, use the following syntax for each plugin
 
-You can install [Visual Studio Code](https://code.visualstudio.com/) extension [VsCode SFDX Hardis](https://marketplace.visualstudio.com/items?itemName=NicolasVuillamy.vscode-sfdx-hardis)
-
-Once installed, click on ![Hardis Group button](https://github.com/hardisgroupcom/sfdx-hardis/raw/main/docs/assets/images/hardis-button.jpg) in VsCode left bar, and follow the additional installation instructions
-
-[![VsCode SFDX Hardis](https://github.com/hardisgroupcom/sfdx-hardis/raw/main/docs/assets/images/extension-icon.png)](https://marketplace.visualstudio.com/items?itemName=NicolasVuillamy.vscode-sfdx-hardis)
+```sh-session
+echo y | sfdx plugins:install sfdx-hardis
+```
 
 ### Docker
 
