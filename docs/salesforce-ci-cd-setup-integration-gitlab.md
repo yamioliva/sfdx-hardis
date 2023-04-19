@@ -11,7 +11,7 @@ In order to avoid to have to open job logs to see deployment errors, sfdx-hardis
 To use this capability:
 
 - Go to Settings -> Access Tokens -> Create a project access token with level **Developer** and scope **api**, and name it **SFDX HARDIS BOT**
-- Go to Settings -> CI/CD -> Variables -> Create a variable named **CI_SFDX_HARDIS_GITLAB_TOKEN** and past the access token value
+- Go to Settings -> CI/CD -> Variables -> Create a variable named **CI_SFDX_HARDIS_GITLAB_TOKEN** and paste the access token value
 
 Everytime you will make a merge request, the CI job will post its result as comment !
 

@@ -10,7 +10,7 @@ description: Learn how to initialize a Salesforce DX Project for CI/CD
 
 - Run the following command and select options to create a new sfdx-hardis project
 
-`sfdx hardis:project:create`
+`sfdx hardis:project:create` (also available in VsCode in **Operations -> Create new SFDX Project**)
 
 - Open file **manifest/package.xml** and replace the content by the following code
 
@@ -21,7 +21,13 @@ description: Learn how to initialize a Salesforce DX Project for CI/CD
 </Package>
 ```
 
-- IF you are using Gitlab CI and sandboxes only (not scratch orgs), open **gitlab-ci-config.yml** at the root of the repository, and set variable **USE_SCRATCH_ORGS** to `"false"`
+- Update .gitignore file to add the following lines at the end:
+  - `hardis-report`
+  - `config/user`
+
+- If you are using Gitlab CI
+  - If you use sandboxes only (not scratch orgs), open **gitlab-ci-config.yml** at the root of the repository, and set variable **USE_SCRATCH_ORGS** to `"false"`
+  - Update or remove [tags](https://docs.gitlab.com/ee/ci/yaml/#tags) properties from **gitlab-ci.yml** so Gitlab CI runners catch the job requests
 
 You can now go to step [Setup CI Authentication](salesforce-ci-cd-setup-auth.md)
 
